@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Assistant Pro | Enterprise-grade AI Support</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Particle Background Canvas -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Animated Grid Background -->
+    <div class="grid-lines"></div>
+    
+    <!-- Glow Effects -->
+    <div class="glow-effect-1"></div>
+    <div class="glow-effect-2"></div>
+    
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span class="logo-icon">AI</span>
+                    <span class="logo-text">ChatGenius</span>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="#features"><span class="link-hover">Features</span></a>
+                    <a href="#solutions"><span class="link-hover">Solutions</span></a>
+                    <a href="#pricing"><span class="link-hover">Pricing</span></a>
+                    <a href="#resources"><span class="link-hover">Resources</span></a>
+                </div>
+                <a href="#demo" class="btn btn-magnetic w-fit-content">
+                    <span class="btn-text">Get Demo</span>
+                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge pulse">
+                    <span class="badge-text">v3.0 Now Live</span>
+                    <span class="badge-dot"></span>
+                </div>
+                <h1>
+                    <span class="heading-line">Transform Customer</span>
+                    <span class="heading-line">Support with <span class="text-gradient">AI Intelligence</span></span>
+                </h1>
+                <p class="subtitle">Enterprise-grade conversational AI powered by Llama 3 and ElasticSearch. Reduce response times by 83% while increasing satisfaction scores.</p>
+                
+                <div class="hero-cta">
+                    <a href="#demo" class="btn btn-primary btn-magnetic w-fit-content">
+                        <span class="btn-text">Start Free Trial</span>
+                        <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+                    </a>
+                    <a href="#tour" class="btn btn-video w-fit-content">
+                        <div class="play-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <span>See it in action</span>
+                    </a>
+                </div>
+                
+                <div class="tech-stack">
+                    <span>Powered by:</span>
+                    <div class="stack-icons">
+                        <div class="stack-icon" data-tooltip="Django">
+                            <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="Django">
+                        </div>
+                        <div class="stack-icon" data-tooltip="Llama 3">
+                            <img src="https://dummyimage.com/40/7e22ce/ffffff?text=LLAMA" alt="Llama">
+                        </div>
+                        <div class="stack-icon" data-tooltip="ElasticSearch">
+                            <img src="https://cdn.worldvectorlogo.com/logos/elasticsearch.svg" alt="ElasticSearch">
+                        </div>
+                        <div class="stack-icon" data-tooltip="Angular">
+                            <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" alt="Angular">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="chat-window">
+                    <div class="chat-header">
+                        <div class="chat-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="chat-title">AI Support Agent</div>
+                        <div class="chat-actions">
+                            <i class="fas fa-minus"></i>
+                            <i class="fas fa-expand"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="chat-body">
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <img src="https://i.pravatar.cc/40?img=5" alt="AI Avatar">
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">Hello! I'm your AI assistant. How can I help you today?</div>
+                                <div class="message-time">10:42 AM</div>
+                            </div>
+                        </div>
+                        <div class="message user-message typing">
+                            <div class="message-avatar">
+                                <img src="https://i.pravatar.cc/40?img=12" alt="User Avatar">
+                            </div>
+                            <div class="message-content">
+                                <div class="typing-indicator">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="Type your message...">
+                        <button class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="integration-badge">
+                    <div class="integration-icon">
+                        <img src="https://cdn.worldvectorlogo.com/logos/odoo.svg" alt="Odoo">
+                    </div>
+                    <span>Seamless Odoo Integration</span>
+                </div>
+                
+                <div class="floating-elements">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-bolt"></i>
+                        <span>83% Faster Responses</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-chart-line"></i>
+                        <span>+45% Satisfaction</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-robot"></i>
+                        <span>24/7 Availability</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ======= FEATURES SECTION ======= -->
+<section class="features-section" id="features">
+    <div class="container">
+        <div class="section-intro">
+            <span class="badge">Core Capabilities</span>
+            <h2>Powerful Features Built for <span class="text-gradient">Enterprise Performance</span></h2>
+            <p class="subtitle">Our AI Chat Assistant combines cutting-edge technology with intuitive design to deliver exceptional customer experiences</p>
+        </div>
+
+        <div class="features-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="ai">AI Technology</button>
+                <button class="tab-btn" data-tab="integration">Integrations</button>
+                <button class="tab-btn" data-tab="analytics">Analytics</button>
+                <button class="tab-btn" data-tab="security">Security</button>
+            </div>
+
+            <div class="tab-content active" id="ai">
+                <div class="feature-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Advanced NLP</h3>
+                        <p>Llama 3-powered understanding with 98% intent recognition accuracy across 50+ languages</p>
+                        <div class="feature-badge">AI CORE</div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card highlighted">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Contextual Understanding</h3>
+                        <p>Maintains conversation context across multiple channels with 30-turn memory</p>
+                        <div class="feature-badge">SMART FEATURE</div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Human Handoff</h3>
+                        <p>Seamless transition to live agents when AI detects complex issues</p>
+                        <div class="feature-badge">HYBRID MODE</div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Continuous Learning</h3>
+                        <p>Automatically improves responses based on conversation outcomes</p>
+                        <div class="feature-badge">ACTIVE LEARNING</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="integration">
+                <div class="feature-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-plug"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Odoo ERP</h3>
+                        <p>Real-time sync with orders, inventory, and customer data</p>
+                        <div class="feature-badge">NATIVE INTEGRATION</div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card highlighted">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>ElasticSearch</h3>
+                        <p>Instant retrieval from knowledge bases with 500ms response time</p>
+                        <div class="feature-badge">OPTIMIZED SEARCH</div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>API First</h3>
+                        <p>RESTful endpoints for custom integrations with your stack</p>
+                        <div class="feature-badge">DEVELOPER FRIENDLY</div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Webhooks</h3>
+                        <p>Real-time event notifications for workflow automation</p>
+                        <div class="feature-badge">AUTOMATION READY</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="analytics">
+                <div class="feature-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Real-time Dashboards</h3>
+                        <p>Monitor KPIs with customizable widgets and alerts</p>
+                        <div class="feature-badge">LIVE DATA</div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card highlighted">
+                        <div class="feature-icon">
+                            <i class="fas fa-comment-dots"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Sentiment Analysis</h3>
+                        <p>Track customer satisfaction trends with emotion detection</p>
+                        <div class="feature-badge">CSAT OPTIMIZATION</div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-project-diagram"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Conversation Flows</h3>
+                        <p>Visualize dialog paths to optimize user journeys</p>
+                        <div class="feature-badge">UX INSIGHTS</div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-export"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Export Reports</h3>
+                        <p>Scheduled PDF/Excel reports for stakeholder sharing</p>
+                        <div class="feature-badge">AUTOMATED</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="security">
+                <div class="feature-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Enterprise-grade Encryption</h3>
+                        <p>AES-256 encryption for data in transit and at rest</p>
+                        <div class="feature-badge">DATA PROTECTION</div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card highlighted">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-lock"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Role-based Access</h3>
+                        <p>Granular permissions with 6 predefined roles</p>
+                        <div class="feature-badge">ACCESS CONTROL</div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Compliance Ready</h3>
+                        <p>Pre-configured for GDPR, HIPAA, and SOC2 requirements</p>
+                        <div class="feature-badge">AUDIT READY</div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-history"></i>
+                            <div class="icon-pulse"></div>
+                        </div>
+                        <h3>Activity Logs</h3>
+                        <p>Immutable records of all system actions</p>
+                        <div class="feature-badge">FULL TRANSPARENCY</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-cta">
+            <div class="cta-card">
+                <h3>Ready to experience these features?</h3>
+                <p>Join 1,000+ businesses transforming their customer support</p>
+                <div class="cta-buttons">
+                    <a href="#demo" class="btn btn-primary w-fit-content">
+                        <i class="fas fa-play-circle"></i> Live Demo
+                    </a>
+                    <a href="#pricing" class="btn btn-secondary w-fit-content">
+                        <i class="fas fa-chart-bar"></i> Compare Plans
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= SOLUTIONS SECTION ======= -->
+<section class="solutions-section" id="solutions">
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">Industry Solutions</span>
+            <h2>Transform Your Business with AI</h2>
+            <p class="subtitle">Tailored solutions for your industry's unique challenges</p>
+        </div>
+
+        <div class="solutions-grid">
+            <!-- Solution 1 -->
+            <div class="solution-card highlighted">
+                <div class="solution-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="icon-bg"></div>
+                </div>
+                <h3>E-Commerce</h3>
+                <p>Reduce cart abandonment by 35% with instant product recommendations and checkout assistance.</p>
+                <ul class="solution-features">
+                    <li><i class="fas fa-check-circle"></i> Automated order tracking</li>
+                    <li><i class="fas fa-check-circle"></i> Personalized upsell suggestions</li>
+                    <li><i class="fas fa-check-circle"></i> Returns & exchange automation</li>
+                </ul>
+                <div class="solution-stats">
+                    <div class="stat">
+                        <div class="stat-value">35%</div>
+                        <div class="stat-label">Higher conversion</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">60%</div>
+                        <div class="stat-label">Fewer support tickets</div>
+                    </div>
+                </div>
+                  <div class="highlight-badge">Most Popular</div>
+            </div>
+
+            <!-- Solution 2 -->
+            <div class="solution-card ">
+                <div class="solution-icon">
+                    <i class="fas fa-university"></i>
+                    <div class="icon-bg"></div>
+                </div>
+                <h3>Banking & Finance</h3>
+                <p>Handle 70% of routine inquiries while maintaining strict security compliance.</p>
+                <ul class="solution-features">
+                    <li><i class="fas fa-check-circle"></i> Account balance inquiries</li>
+                    <li><i class="fas fa-check-circle"></i> Fraud detection alerts</li>
+                    <li><i class="fas fa-check-circle"></i> Loan application pre-screening</li>
+                </ul>
+                <div class="solution-stats">
+                    <div class="stat">
+                        <div class="stat-value">4.8/5</div>
+                        <div class="stat-label">Customer satisfaction</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">50%</div>
+                        <div class="stat-label">Call center reduction</div>
+                    </div>
+                </div>
+              
+            </div>
+
+            <!-- Solution 3 -->
+            <div class="solution-card">
+                <div class="solution-icon">
+                    <i class="fas fa-heartbeat"></i>
+                    <div class="icon-bg"></div>
+                </div>
+                <h3>Healthcare</h3>
+                <p>HIPAA-compliant patient support with 24/7 availability.</p>
+                <ul class="solution-features">
+                    <li><i class="fas fa-check-circle"></i> Appointment scheduling</li>
+                    <li><i class="fas fa-check-circle"></i> Prescription refill requests</li>
+                    <li><i class="fas fa-check-circle"></i> Symptom checking</li>
+                </ul>
+                <div class="solution-stats">
+                    <div class="stat">
+                        <div class="stat-value">40%</div>
+                        <div class="stat-label">Faster response</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">HIPAA compliant</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 4 -->
+            <div class="solution-card">
+                <div class="solution-icon">
+                    <i class="fas fa-headset"></i>
+                    <div class="icon-bg"></div>
+                </div>
+                <h3>Customer Support</h3>
+                <p>Reduce resolution time by 65% with instant knowledge base retrieval.</p>
+                <ul class="solution-features">
+                    <li><i class="fas fa-check-circle"></i> Automated ticket creation</li>
+                    <li><i class="fas fa-check-circle"></i> Multilingual support</li>
+                    <li><i class="fas fa-check-circle"></i> Sentiment analysis</li>
+                </ul>
+                <div class="solution-stats">
+                    <div class="stat">
+                        <div class="stat-value">65%</div>
+                        <div class="stat-label">Faster resolution</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">45%</div>
+                        <div class="stat-label">Cost reduction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="solutions-cta">
+            <p>Don't see your industry? We customize solutions for every business need.</p>
+            <a href="#contact" class="btn btn-primary btn-magnetic w-fit-content">
+                <span class="btn-text">Request Custom Solution</span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- ======= PRICING SECTION ======= -->
+<section class="pricing-section" id="pricing">
+    <div class="container">
+        <div class="section-intro">
+            <span class="badge">Transparent Pricing</span>
+            <h2>Simple Plans for <span class="text-gradient">Every Business</span></h2>
+            <p class="subtitle">Start with a 14-day free trial. No credit card required.</p>
+        </div>
+
+        <div class="pricing-toggle">
+            <span>Monthly</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="billing-toggle">
+                <span class="slider"></span>
+            </label>
+            <span>Annual <span class="discount-badge">Save 20%</span></span>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Starter Plan -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Starter</h3>
+                    <p>Perfect for small teams</p>
+                    <div class="price">
+                        <span class="monthly-price">$49</span>
+                        <span class="annual-price">$39</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <div class="billing-note">billed <span class="monthly-text">monthly</span><span class="annual-text">annually</span></div>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> <strong>1,000</strong> queries/month</li>
+                    <li><i class="fas fa-check"></i> <strong>Basic</strong> NLP capabilities</li>
+                    <li><i class="fas fa-check"></i> <strong>Email</strong> support</li>
+                    <li><i class="fas fa-check"></i> <strong>Odoo</strong> integration</li>
+                    <li><i class="fas fa-check"></i> <strong>3</strong> team members</li>
+                    <li><i class="fas fa-check"></i> <strong>Basic</strong> analytics</li>
+                </ul>
+                <a href="#signup" class="btn btn-outline">Start Free Trial</a>
+            </div>
+
+            <!-- Professional Plan (Recommended) -->
+            <div class="pricing-card popular">
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-header">
+                    <h3>Professional</h3>
+                    <p>For growing businesses</p>
+                    <div class="price">
+                        <span class="monthly-price">$199</span>
+                        <span class="annual-price">$159</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <div class="billing-note">billed <span class="monthly-text">monthly</span><span class="annual-text">annually</span></div>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> <strong>10,000</strong> queries/month</li>
+                    <li><i class="fas fa-check"></i> <strong>Advanced</strong> AI with Llama</li>
+                    <li><i class="fas fa-check"></i> <strong>Priority</strong> support</li>
+                    <li><i class="fas fa-check"></i> <strong>ElasticSearch</strong> integration</li>
+                    <li><i class="fas fa-check"></i> <strong>10</strong> team members</li>
+                    <li><i class="fas fa-check"></i> <strong>Advanced</strong> analytics</li>
+                    <li><i class="fas fa-check"></i> <strong>Custom</strong> branding</li>
+                    <li><i class="fas fa-check"></i> <strong>API</strong> access</li>
+                </ul>
+                <a href="#signup" class="btn btn-primary">Start Free Trial</a>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Enterprise</h3>
+                    <p>For large organizations</p>
+                    <div class="price">
+                        <span class="custom-price">Custom</span>
+                    </div>
+                    <div class="billing-note">Tailored to your needs</div>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> <strong>Unlimited</strong> queries</li>
+                    <li><i class="fas fa-check"></i> <strong>Dedicated</strong> AI training</li>
+                    <li><i class="fas fa-check"></i> <strong>24/7</strong> premium support</li>
+                    <li><i class="fas fa-check"></i> <strong>On-premise</strong> deployment</li>
+                    <li><i class="fas fa-check"></i> <strong>Unlimited</strong> team members</li>
+                    <li><i class="fas fa-check"></i> <strong>Enterprise</strong> analytics</li>
+                    <li><i class="fas fa-check"></i> <strong>White-label</strong> solution</li>
+                    <li><i class="fas fa-check"></i> <strong>SLA</strong> guaranteed</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline">Contact Sales</a>
+            </div>
+        </div>
+
+        <div class="pricing-footer">
+            <div class="faq-item">
+                <h4><i class="fas fa-question-circle"></i> What happens if I exceed my query limit?</h4>
+                <p>We'll notify you before you reach your limit. Additional queries are charged at $0.05 per query for Starter and $0.03 for Professional plans.</p>
+            </div>
+            <div class="faq-item">
+                <h4><i class="fas fa-question-circle"></i> Can I change plans later?</h4>
+                <p>Yes! You can upgrade, downgrade, or cancel anytime with prorated adjustments.</p>
+            </div>
+            <div class="trust-badges">
+                <div class="badge-item">
+                    <i class="fas fa-lock"></i>
+                    <span>Secure payments</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>GDPR compliant</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-clock"></i>
+                    <span>30-day money back</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======= RESOURCES SECTION ======= -->
+<section class="resources-section" id="resources">
+    <div class="container">
+        <div class="section-intro">
+            <span class="badge">Learning Center</span>
+            <h2>Boost Your AI Knowledge with Our <span class="text-gradient">Resources</span></h2>
+            <p class="subtitle">Explore guides, case studies, and technical documentation to maximize your AI chat implementation</p>
+        </div>
+
+        <div class="resources-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="guides">Guides</button>
+                <button class="tab-btn" data-tab="case-studies">Case Studies</button>
+                <button class="tab-btn" data-tab="api-docs">API Docs</button>
+                <button class="tab-btn" data-tab="webinars">Webinars</button>
+            </div>
+
+            <div class="tab-content active" id="guides">
+                <div class="resources-grid">
+                    <!-- Resource 1 -->
+                    <a href="#" class="resource-card">
+                        <div class="resource-badge">Guide</div>
+                        <div class="resource-image" style="background-color: #f3e8ff;">
+                            <img src="https://cdn.pixabay.com/photo/2024/09/11/10/37/dialogue-9039504_1280.jpg" alt="AI Implementation">
+                        </div>
+                        <div class="resource-content">
+                            <h3>Getting Started with AI Chat</h3>
+                            <p>Complete implementation guide for first-time users</p>
+                            <div class="resource-meta">
+                                <span><i class="far fa-clock"></i> 15 min read</span>
+                                <span><i class="far fa-file-alt"></i> PDF</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Resource 2 -->
+                    <a href="#" class="resource-card">
+                        <div class="resource-badge">Cheat Sheet</div>
+                        <div class="resource-image" style="background-color: #e9d5ff;">
+                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Best Practices">
+                        </div>
+                        <div class="resource-content">
+                            <h3>AI Chat Best Practices</h3>
+                            <p>25 proven techniques to improve customer interactions</p>
+                            <div class="resource-meta">
+                                <span><i class="far fa-clock"></i> 8 min read</span>
+                                <span><i class="far fa-file-alt"></i> PDF</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Resource 3 -->
+                    <a href="#" class="resource-card">
+                        <div class="resource-badge">Tutorial</div>
+                        <div class="resource-image" style="background-color: #d8b4fe;">
+                            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Odoo Integration">
+                        </div>
+                        <div class="resource-content">
+                            <h3>Odoo Integration Guide</h3>
+                            <p>Step-by-step instructions for seamless ERP connection</p>
+                            <div class="resource-meta">
+                                <span><i class="far fa-clock"></i> 12 min read</span>
+                                <span><i class="fas fa-video"></i> Video</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="tab-content" id="case-studies">
+                <div class="resources-grid">
+                    <!-- Case Study 1 -->
+                    <a href="#" class="resource-card">
+                        <div class="resource-badge">Case Study</div>
+                        <div class="resource-image" style="background-color: #f3e8ff;">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="E-commerce Case Study">
+                        </div>
+                        <div class="resource-content">
+                            <h3>E-commerce Support Transformation</h3>
+                            <p>How ShopEasy reduced tickets by 65% with AI chat</p>
+                            <div class="resource-meta">
+                                <span><i class="far fa-clock"></i> 10 min read</span>
+                                <span><i class="far fa-file-alt"></i> PDF</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Case Study 2 -->
+                    <a href="#" class="resource-card">
+                        <div class="resource-badge">Case Study</div>
+                        <div class="resource-image" style="background-color: #e9d5ff;">
+                            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Banking Case Study">
+                        </div>
+                        <div class="resource-content">
+                            <h3>Banking Customer Service Revolution</h3>
+                            <p>National Bank's 80% deflection rate with AI</p>
+                            <div class="resource-meta">
+                                <span><i class="far fa-clock"></i> 12 min read</span>
+                                <span><i class="far fa-file-alt"></i> PDF</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Case Study 3 -->
+                    <a href="#" class="resource-card">
+                        <div class="resource-badge">Case Study</div>
+                        <div class="resource-image" style="background-color: #d8b4fe;">
+                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Healthcare Case Study">
+                        </div>
+                        <div class="resource-content">
+                            <h3>Healthcare Appointment Automation</h3>
+                            <p>Reducing no-shows by 40% with AI reminders</p>
+                            <div class="resource-meta">
+                                <span><i class="far fa-clock"></i> 8 min read</span>
+                                <span><i class="fas fa-video"></i> Video</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Additional tab contents for API Docs and Webinars would go here -->
+        </div>
+
+        <div class="resources-cta">
+            <div class="cta-card">
+                <h3>Need Help Finding the Right Resources?</h3>
+                <p>Our AI experts can recommend the best materials for your specific needs</p>
+                <a href="#contact" class="btn btn-primary w-fit-content">
+                    <i class="fas fa-envelope"></i> Contact Our Team
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- ======= ENHANCED CTA SECTION ======= -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-card">
+            <!-- Decorative elements -->
+            <div class="cta-blob blob-1"></div>
+            <div class="cta-blob blob-2"></div>
+            <div class="cta-particles"></div>
+            
+            <!-- Content -->
+            <h2>Ready to Revolutionize Your Customer Support?</h2>
+            <p class="cta-subtitle">Join 1,250+ businesses boosting satisfaction scores with AI-powered conversations</p>
+            
+            <div class="cta-buttons">
+                <a href="#demo" class="btn btn-primary btn-magnetic w-fit-content">
+                    <span class="btn-text">Start Free 14-Day Trial</span>
+                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="#demo" class="btn btn-video w-fit-content">
+                    <div class="play-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                    <span>Watch Product Tour</span>
+                </a>
+            </div>
+            
+            <!-- Trust indicators -->
+            <div class="trust-badges">
+                <div class="badge-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>No credit card required</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Setup in 5 minutes</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ======= FOOTER SECTION ======= -->
+<footer class="site-footer">
+   <div class="footer-wave">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <!-- Subtle layered waves with light purple (#e9d5ff) -->
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" 
+              opacity=".2" fill="%23f3e8ff"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" 
+              opacity=".3" fill="%23f3e8ff"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" 
+              opacity=".4" fill="%23f3e8ff"></path>
+    </svg>
+</div>
+
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: About -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon">AI</span>
+                        <span class="logo-text">ChatGenius</span>
+                    </div>
+                    <p class="footer-about">Enterprise-grade AI chat solutions powered by cutting-edge NLP and machine learning technologies.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Product -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Product</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#integrations">Integrations</a></li>
+                        <li><a href="#roadmap">Roadmap</a></li>
+                        <li><a href="#changelog">Changelog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Resources -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#guides">Guides</a></li>
+                        <li><a href="#webinars">Webinars</a></li>
+                        <li><a href="#api-docs">API Documentation</a></li>
+                        <li><a href="#community">Community</a></li>
+                        <li><a href="#status">System Status</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Company -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#press">Press</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                        <li><a href="#legal">Legal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: Newsletter -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Stay Updated</h3>
+                    <p class="footer-newsletter-text">Subscribe to our newsletter for product updates and AI insights.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="newsletter-btn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="footer-checkbox">
+                            <input type="checkbox" id="footer-consent" required>
+                            <label for="footer-consent">I agree to privacy policy</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 ChatGenius AI. All rights reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#cookies">Cookie Policy</a>
+                    <a href="#gdpr">GDPR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
